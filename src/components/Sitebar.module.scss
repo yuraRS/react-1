@@ -1,0 +1,96 @@
+
+.sitebar {
+    background-color: #485ab2;
+    margin: 0 0 0 -15px;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+   
+}
+.menu {
+}
+.menu:not(:last-child) {
+    margin-bottom: 70px;
+}
+.body {
+}
+.list {
+    display: grid;
+    row-gap: 25px;
+}
+.item {
+    
+}
+.link  {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+}
+@media (min-width: 992px){
+    .link:hover {
+        color: rgb(137, 175, 216);
+    } 
+}
+
+.settings {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    margin-bottom: 50px;
+    display: block;
+}
+
+@media (min-width: 992px){
+    .settings:hover {
+        color: rgb(137, 175, 216);
+    } 
+}
+
+.settings:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+
+.title {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.friend {
+    display: grid;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    img {
+        max-width: 100%;
+    }
+}
+
+.name {
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease 0s;
+}
+
+@media (min-width: 992px){
+    .name:hover {
+        color: rgb(137, 175, 216);
+    } 
+}
