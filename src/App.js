@@ -1,31 +1,23 @@
 import './scss/App.scss';
 import logo from './logo.svg';
-import Header from './components/Header';
-import Sitebar from './components/Sitebar';
-import Content from './components/Content';
-
-
-
-
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Prifile/Profile';
 
 
 
 
 const App = () => {
   return (
-    <div className='wrapper'>
-      <Header />
-      <main className='page'>
-        <div className="page__container">
-          <Sitebar /> 
-          <Content />
-        </div>
-      </main>
+    <div className='app-wrapper'>
+      <div className="app-container">
+        <Header />
+        <Navbar /> 
+        <Profile />
+      </div>
     </div>
   );
 };
-
-
 
 
 

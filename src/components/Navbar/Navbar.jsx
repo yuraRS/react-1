@@ -1,8 +1,8 @@
-import s from './Sitebar.module.scss';
+import s from './Navbar.module.scss';
 console.log(s)
-const Sitebar = () => {
+const Navebar = () => {
     return (
-        <div className={s.sitebar}>
+        <div className={s.navebar}>
         <div className={s.menu}>
           <nav className={s.body}>
             <ul className={s.list}>
@@ -39,4 +39,4 @@ const Sitebar = () => {
     );
 };
 
-export default Sitebar;
+export default Navebar;

@@ -5,32 +5,28 @@
   flex-direction: column;
 }
 
-.wrapper {
+.app-wrapper {
   flex: 1 1 100%;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  gap: 15px;
+  
+  
+  
 }
 /*=================================================================*/
 
 [class*="container"] {
-  max-width: 1230px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
  }
 
 /*=================================================================*/
-.page {
-  flex: 1 1 auto;
 
-
-  &__container {
-    min-height: 100%;
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    column-gap: 15px;
-    max-width: 1230px;
-  } 
-  
-}
