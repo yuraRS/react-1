@@ -1,5 +1,4 @@
 import s from './Navbar.module.scss';
-console.log(s)
 const Navebar = () => {
     return (
         <div className={s.navebar}>

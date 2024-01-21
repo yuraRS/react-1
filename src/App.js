@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Prifile/Profile';
+import Dialogs from './components/Dialogs/Dialogs';
 
 
 
@@ -13,7 +14,11 @@ const App = () => {
       <div className="app-container">
         <Header />
         <Navbar /> 
-        <Profile />
+        <div className='app-wrapper-content'>
+            {/* <Profile /> */}
+            <Profile />
+            {/* <Dialogs /> */}
+        </div>
       </div>
     </div>
   );

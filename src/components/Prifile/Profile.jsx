@@ -20,6 +20,7 @@ const Profile = () => {
           <div className={s.site}>Web site: https://www.test.com</div>
         </div>
       </div>
+
       <MyPosts />
     </div>
   );

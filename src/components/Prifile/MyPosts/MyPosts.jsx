@@ -1,4 +1,5 @@
 import s from './MyPosts.module.scss';
+import About from './Post/About';
 import Post from './Post/Post';
 
 
@@ -13,12 +14,11 @@ const MyPosts = () => {
         </form>
       </div>
       <div className={s.posts}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post message='Hello world' likeCounter='32' />
+        <Post message='My name is Yura' likeCounter='10' />
       </div>
+      <About name='Yura' age='35' />
+      <About name='Ola' age='23' />
     </div>
   );
 };
