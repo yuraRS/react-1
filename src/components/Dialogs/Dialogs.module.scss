@@ -1,5 +1,40 @@
 
 .dialogs {
-    font-size: 26px;
-    color: chocolate;
+    padding: 20px 15px 25px 15px;
+    display: grid;
+    grid-template-columns: minmax(auto, 170px) minmax(auto, 800px);
+    column-gap: 15px;
+
+}
+
+.dialogsItems {
+    display: grid;
+    row-gap: 30px;
+    border-right: 1px solid rgba(195, 183, 183, 0.521);
+}
+
+.dialog {
+    font-size: 16px;
+    font-weight: 500;
+    &:active {
+        color: rgb(189, 189, 187);
+    }
+}
+
+.active {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(189, 189, 187);
+}
+
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-left: 20px;
+}
+
+.message {
+    font-size: 16px;
 }

@@ -28,6 +28,10 @@
     transition: all 0.3s ease 0s;
     font-weight: 500;
 
+    [class*= active] {
+        color: rgb(171, 165, 189);
+    }
+
 }
 
 
@@ -101,6 +105,4 @@
     } 
 }
 
-[class*= active] {
-    color: rgb(171, 165, 189);
-}
+

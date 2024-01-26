@@ -1,27 +1,29 @@
+
+
 import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.scss';
 const Navebar = () => {
 
 
-    return (
-        <div className={s.navebar}>
-        <div className={s.menu}>
-          <nav className={s.body}>
-            <ul className={s.list}>
-              <li className={s.item}>
-                <NavLink to='/profile' className={s.link}>Profile</NavLink>
-              </li>
-              <li className={s.item}>
-                <NavLink to='/dialogs' className={s.link} >Message</NavLink>
-              </li>
-              <li className={s.item}>
-                  <NavLink to='/news' className={s.link} >News</NavLink>
-              </li>
-              <li className={s.item}>
-                  <NavLink to='/music' className={s.link} >Music</NavLink>
-              </li>
-            </ul>
-          </nav>
+  return (
+    <div className={s.navebar}>
+      <div className={s.menu}>
+        <nav className={s.body}>
+          <ul className={s.list}>
+            <li className={s.item}>
+              <NavLink to='/ptofile' className={s.link} >Profile</NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink to='/dialogs' className={s.link} >Messages</NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink to='/news' className={s.link} >News</NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink to='/music' className={s.link} >Music</NavLink>
+            </li>
+          </ul>
+        </nav>
         </div>
         <NavLink to='/settings' className={s.settings} >Settings</NavLink>
         <div className={s.title}>Friends</div>
