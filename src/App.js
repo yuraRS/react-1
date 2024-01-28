@@ -22,7 +22,7 @@ const App = () => {
               <Routes>
                 <Route path='/ptofile/*' element={<Profile />} />
                 <Route path='/dialogs/*' element={<Dialogs />} />
-                <Route path='/news' element={<News />} />
+                <Route path='/news/*' element={<News />} />
                 <Route path='/music' element={<Music />} />
                 <Route path='/settings' element={<Settings />} />
               </Routes>
