@@ -1,9 +1,10 @@
-
-
 import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.scss';
-const Navebar = () => {
+import Friend from './Friend/Friend';
 
+
+const Navebar = (props) => {
+  let ffiendElement =  props.friend.map( f =>  <Friend name ={f.name} avatar={f.url} />);
 
   return (
     <div className={s.navebar}>
@@ -28,24 +29,7 @@ const Navebar = () => {
         <NavLink to='/settings' className={s.settings} >Settings</NavLink>
         <div className={s.title}>Friends</div>
         <div className={s.items}>
-          <div className={s.friend}>
-            <a href='#' className={s.avatar}>
-              <img src="https://mighty.tools/mockmind-api/content/human/44.jpg" alt="avatar"/>
-            </a>
-            <a href="#" className={s.name}>Anna</a>
-          </div>
-          <div className={s.friend}>
-            <a href='#' className={s.avatar}>
-              <img src="https://mighty.tools/mockmind-api/content/human/55.jpg" alt="avatar"/>
-            </a>
-            <a href="#" className={s.name}>Ira</a>
-          </div>
-          <div className={s.friend}>
-            <a href='#' className={s.avatar}>
-              <img src="https://mighty.tools/mockmind-api/content/human/48.jpg" alt="avatar"/>
-            </a>
-            <a href="#" className={s.name}>Ola</a>
-          </div>
+          {ffiendElement}
         </div>
       </div>
     );

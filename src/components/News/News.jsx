@@ -2,10 +2,9 @@ import s from './News.module.scss';
 
 
 
-
-
 const News = (props) => {
-    return (
+
+        return (
         <>
             <div className={s.news} >News info</div>
         </>

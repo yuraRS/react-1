@@ -2,21 +2,16 @@ import s from './MyPosts.module.scss';
 import Post from './Post/Post';
 
 
-let posts = [
-  {id: 1, message: 'Hello world', likeCounter: 10},
-  {id: 2, message: 'My name is Yura', likeCounter: 2},
-];
 
-let postElement = posts.map(p => {
-  return (
-    <Post message={p.message} likeCounter={p.likeCounter} />
-  )
-})
+const MyPosts = (props) => {
+
+  let postElement = props.post.map(p => {
+    return (
+      <Post message={p.message} likeCounter={p.likeCounter} />
+    )
+  })
 
 
-
-
-const MyPosts = () => {
   return (
     <div className={s.body}>
       <div className={s.postsTitle}>My posts</div>
