@@ -16,10 +16,34 @@
 .dialog {
     font-size: 16px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
     &:active {
         color: rgb(189, 189, 187);
     }
 }
+
+.icon {
+    overflow: hidden;
+    flex: 0 0 50px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .active {
     font-size: 16px;

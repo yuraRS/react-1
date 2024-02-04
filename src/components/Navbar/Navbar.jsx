@@ -4,7 +4,7 @@ import Friend from './Friend/Friend';
 
 
 const Navebar = (props) => {
-  let ffiendElement =  props.friend.map( f =>  <Friend name ={f.name} avatar={f.url} />);
+  let ffiendElement = props.state.friends.map( f =>  <Friend name ={f.name} avatar={f.url} />);
 
   return (
     <div className={s.navebar}>
