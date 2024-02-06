@@ -37,6 +37,41 @@
 }
 
 
+.newMessage {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.area {
+    min-height: 80px;
+    background-color: RGB(240, 242, 245);
+    padding: 10px;
+}
+
+[class*= error] {
+    background-color: #c7163d;
+}
+  .button {
+    align-self: flex-end;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    background-color: #485ab2;
+    padding: 0 40px;
+    transition: all 0.3s ease 0s;
+  
+    @media (min-width: 992px){
+        &:hover {
+          background-color: #2a3988;
+        }
+    }
+  }
+
 
 
 

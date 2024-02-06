@@ -30,15 +30,6 @@ let state = {
             { id: 3, name: 'Ola', url: 'https://mighty.tools/mockmind-api/content/human/55.jpg' },
         ],
     },
-
-    newsPage: {
-        politic: [
-            {id: 1, news: 'Hello world'},
-            {id: 2, news: 'Yo'},
-            {id: 3, news: 'Hi'},
-        ],
-    },
-    
 };
 
 export default state;
