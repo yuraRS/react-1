@@ -14,14 +14,9 @@
 }
 
 .dialog {
-    font-size: 16px;
-    font-weight: 500;
     display: flex;
     align-items: center;
     column-gap: 10px;
-    &:active {
-        color: rgb(189, 189, 187);
-    }
 }
 
 .icon {
@@ -33,6 +28,14 @@
 
     img {
         max-width: 100%;
+    }
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 500;
+    &:active {
+        color: rgb(189, 189, 187);
     }
 }
 
