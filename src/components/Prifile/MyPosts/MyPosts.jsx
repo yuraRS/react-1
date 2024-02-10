@@ -20,7 +20,6 @@ const MyPosts = (props) => {
     props.addPost(text);
   };
 
-
  
   return (
     <div className={s.body}>

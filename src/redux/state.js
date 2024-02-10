@@ -1,3 +1,5 @@
+import { renderEtireTree } from "../render";
+
 
 let state = {
     profilePage: {
@@ -41,7 +43,8 @@ export let addPost = (postMessage) => {
     };
 
     state.profilePage.posts.push(newPost);
-}
+    renderEtireTree(state);
+};
 
 export let addMessage = (messageInfo) => {
     let newMessage = {
@@ -50,7 +53,11 @@ export let addMessage = (messageInfo) => {
     };
 
     state.dialogsPage.messages.push(newMessage);
+    renderEtireTree(state);
 };
+
+
+
 
 
 export default state;
