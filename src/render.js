@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './css/obnusenie.css';
 import App from './App';
-import { addMessage, addPost } from './redux/state';
+import { addMessage, addPost, updateNewMessageText, updateNewPostText } from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 
 
 
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
 export let renderEtireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state} addPost={addPost} addMessage={addMessage} />
+                <App state={state} addPost={addPost} updateNewMessageText={updateNewMessageText} addMessage={addMessage} updateNewPostText={updateNewPostText} />
             </React.StrictMode>
         </BrowserRouter>
     );

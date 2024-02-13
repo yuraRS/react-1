@@ -7,6 +7,7 @@ let state = {
             {id: 1, message: 'Hello world', likeCounter: 10},
             {id: 2, message: 'My name is Yura', likeCounter: 2},
         ],
+        newPostText: 'world',
     },
 
     dialogsPage: {
@@ -23,6 +24,7 @@ let state = {
             {id: 2, message: 'How is you'},
             {id: 3, message: 'Yo'},
         ],
+        newMessageText: 'hello',
     },
 
     navbarPage: {
@@ -34,25 +36,35 @@ let state = {
     },
 };
 
-
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 3,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likeCounter: 0,
     };
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     renderEtireTree(state);
 };
 
-export let addMessage = (messageInfo) => {
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEtireTree(state);
+}
+
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    renderEtireTree(state);
+};
+
+export let addMessage = () => {
     let newMessage = {
         id: 4,
-        message:  messageInfo,
+        message: state.dialogsPage.newMessageText,
     };
-
     state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
     renderEtireTree(state);
 };
 
