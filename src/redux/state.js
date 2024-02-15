@@ -1,5 +1,6 @@
-import { renderEtireTree } from "../render";
+let renderEtireTree = () => {
 
+};
 
 let state = {
     profilePage: {
@@ -36,7 +37,7 @@ let state = {
     },
 };
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 3,
         message: state.profilePage.newPostText,
@@ -46,19 +47,21 @@ export let addPost = () => {
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
     renderEtireTree(state);
+
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     renderEtireTree(state);
 }
 
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
     state.dialogsPage.newMessageText = newText;
     renderEtireTree(state);
+
 };
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 4,
         message: state.dialogsPage.newMessageText,
@@ -69,7 +72,9 @@ export let addMessage = () => {
 };
 
 
-
+export const subscrite = (observer) => {
+    renderEtireTree = observer;
+};
 
 
 export default state;
