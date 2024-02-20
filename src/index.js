@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './css/obnusenie.css';
 import App from './App';
-import state, { addMessage, addPost, subscrite, updateNewMessageText, updateNewPostText } from './redux/state';
+import store from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ let renderEtireTree = (state) => {
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state} addPost={addPost} updateNewMessageText={updateNewMessageText} addMessage={addMessage} updateNewPostText={updateNewPostText} />
+                <App state={store.getState()} addPost={store.addPost.bind(store)} updateNewMessageText={store.updateNewMessageText.bind(store)} addMessage={store.addMessage.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)} />
             </React.StrictMode>
         </BrowserRouter>
     );
@@ -22,8 +22,8 @@ let renderEtireTree = (state) => {
 
 
 
-renderEtireTree(state);
-subscrite(renderEtireTree);
+renderEtireTree(store.getState());
+store.subscrite(renderEtireTree);
 
 
 
