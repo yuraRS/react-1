@@ -1,4 +1,4 @@
-let renderEtireTree = () => {
+let callbackRender = () => {
 
 };
 
@@ -46,18 +46,18 @@ export const addPost = () => {
 
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
-    renderEtireTree(state);
+    callbackRender(state);
 
 };
 
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    renderEtireTree(state);
+    callbackRender(state);
 }
 
 export const updateNewMessageText = (newText) => {
     state.dialogsPage.newMessageText = newText;
-    renderEtireTree(state);
+    callbackRender(state);
 
 };
 
@@ -68,13 +68,17 @@ export const addMessage = () => {
     };
     state.dialogsPage.messages.push(newMessage);
     state.dialogsPage.newMessageText = '';
-    renderEtireTree(state);
+    callbackRender(state);
 };
 
 
 export const subscrite = (observer) => {
-    renderEtireTree = observer;
+    callbackRender = observer;
 };
 
 
 export default state;
+
+
+
+
