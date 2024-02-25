@@ -6,7 +6,7 @@ import Message from './Message/Message';
 
 
 const Dialogs = (props) => { 
-   
+
 
     let dialogsElement = props.dialogsPage.dialods.map( d => <DialogItem name={d.name} id={d.id} icon={d.url} />); 
     let messageElement = props.dialogsPage.messages.map((m) => <Message message={m. message} />);
@@ -15,13 +15,15 @@ const Dialogs = (props) => {
     let newMessageText = React.createRef();
 
     let onMessageChange = () => {
+
         let text = newMessageText.current.value;
-        props.updateNewMessageText(text);
+        props.dispatch({type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text});
     };
     
 
     let addMessage = () => {
-        props.addMessage();
+        let action = {type: 'ADD-MESSAGE'};
+        props.dispatch(action);
     };
 
     return (
