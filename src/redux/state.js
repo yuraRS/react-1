@@ -1,3 +1,5 @@
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let store = {
     _callSubscriber () {
@@ -25,7 +27,7 @@ let store = {
                 { id: 2, message: 'How is you' },
                 { id: 3, message: 'Yo' },
             ],
-            newMessageText: 'hello',
+            newMessageBody: '',
         },
 
         navbarPage: {
@@ -62,24 +64,25 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
 
-        } else if (action.type === 'ADD-MESSAGE') {
-            let newMessage = {
-                id: 4,
-                message: this._state.dialogsPage.newMessageText,
-            };
-            this._state.dialogsPage.messages.push(newMessage);
-            this._state.dialogsPage.newMessageText = '';
+        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+            this._state.dialogsPage.newMessageBody = action.body;
             this._callSubscriber(this._state);
-
-        } else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
-            this._state.dialogsPage.newMessageText = action.newText;
+        } else if (action.type === SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.messages.push({id: 4, message: body});
+            this._state.dialogsPage.newMessageBody = '';
             this._callSubscriber(this._state);
-        } 
+        }
     },
 };
 
 
+export const updataNewMessageBodyCriator = (newText) => (
+    {type: UPDATE_NEW_MESSAGE_BODY, body: newText}
+);
 
+
+export const sendMessageCriator = () => ({type: SEND_MESSAGE});
 
 export default store;
 
