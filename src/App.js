@@ -1,7 +1,7 @@
 import './scss/App.scss';
 import logo from './logo.svg';
 import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
+import Sitebar from './components/Navbar/Sitebar';
 import {Route, Routes } from 'react-router-dom';
 import Profile from './components/Prifile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
@@ -16,7 +16,7 @@ const App = (props) => {
       <div className="app-container">
         <div className='app-body'>
           <Header />
-          <Navbar state={props.state.navbarPage} />
+          <Sitebar state={props.state.sitebarPage} />
           <div className='app-wrapper-content'>
             <Routes>
               <Route path='/ptofile/*' element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />

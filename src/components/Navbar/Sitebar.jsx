@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import s from './Navbar.module.scss';
+import s from './Sitebar.module.scss';
 import Friend from './Friend/Friend';
 
 
-const Navebar = (props) => {
+const Sitebar = (props) => {
   let ffiendElement = props.state.friends.map( f =>  <Friend name ={f.name} avatar={f.url} />);
 
   return (
-    <div className={s.navebar}>
+    <div className={s.sitebar}>
       <div className={s.menu}>
         <nav className={s.body}>
           <ul className={s.list}>
@@ -35,4 +35,4 @@ const Navebar = (props) => {
     );
 };
 
-export default Navebar;
+export default Sitebar;

@@ -1,5 +1,10 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-const SEND_MESSAGE = 'SEND-MESSAGE';
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+import sitebarReducer from "./sitebar-reducer";
+
+
+
+
 
 let store = {
     _callSubscriber () {
@@ -30,7 +35,7 @@ let store = {
             newMessageBody: '',
         },
 
-        navbarPage: {
+        sitebarPage: {
             friends: [
                 { id: 1, name: 'Yura', url: 'https://mighty.tools/mockmind-api/content/human/72.jpg' },
                 { id: 2, name: 'Ira', url: 'https://mighty.tools/mockmind-api/content/human/78.jpg' },
@@ -40,7 +45,7 @@ let store = {
     },
 
 
-    subscrite (observer) {
+    subscribe (observer) {
         this._callSubscriber = observer;
     },
     getState () {
@@ -49,40 +54,17 @@ let store = {
 
 
     dispatch (action) {
-        debugger
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 3,
-                message: this._state.profilePage.newPostText,
-                likeCounter: 0,
-            };
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
 
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.sitebarPage = sitebarReducer(this._state.sitebarPage, action);
 
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.dialogsPage.newMessageBody = action.body;
-            this._callSubscriber(this._state);
-        } else if (action.type === SEND_MESSAGE) {
-            let body = this._state.dialogsPage.newMessageBody;
-            this._state.dialogsPage.messages.push({id: 4, message: body});
-            this._state.dialogsPage.newMessageBody = '';
-            this._callSubscriber(this._state);
-        }
+        this._callSubscriber(this._state);
     },
 };
 
 
-export const updataNewMessageBodyCriator = (newText) => (
-    {type: UPDATE_NEW_MESSAGE_BODY, body: newText}
-);
 
-
-export const sendMessageCriator = () => ({type: SEND_MESSAGE});
 
 export default store;
 
