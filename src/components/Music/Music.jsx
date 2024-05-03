@@ -1,14 +1,17 @@
-import s from './Music.module.scss';
+import style from './Music.module.scss';
 
 
+let Music = (props) => {
 
-const Music = (props) => {
+
 
     return (
-        <div>
-            <div className={s.music}>Music</div>
-        </div>
+        <>
+           
+        </>
     );
 };
 
+
 export default Music;
+

@@ -6,27 +6,24 @@ import './css/obnusenie.css';
 import App from './App';
 import store from './redux/redux-store';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let renderEtireTree = (state) => {
-    root.render(
-        <BrowserRouter>
-            <React.StrictMode>
-                <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
-            </React.StrictMode>
-        </BrowserRouter>
-    );
-};
+root.render(
+    <BrowserRouter>
+        {/* <React.StrictMode> */}
+            <Provider store={store}>
+                <App state={store.getState()} />
+            </Provider>
+        {/* </React.StrictMode> */}
+    </BrowserRouter>
+);
 
 
+window.store = store;
 
-renderEtireTree(store.getState());
-store.subscribe(() => {
-    let state = store.getState();
-    renderEtireTree(state);
-});
 
 
 
@@ -36,6 +33,19 @@ store.subscribe(() => {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

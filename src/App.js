@@ -5,9 +5,13 @@ import Sitebar from './components/Navbar/Sitebar';
 import {Route, Routes } from 'react-router-dom';
 import Profile from './components/Prifile/Profile';
 import News from './components/News/News';
-import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import UsersContainer from './components/Users/UsersContainer';
+import Music from './components/Music/Music';
+
+
+
 
 
 const App = (props) => {
@@ -19,11 +23,12 @@ const App = (props) => {
           <Sitebar state={props.state.sitebarPage} />
           <div className='app-wrapper-content'>
             <Routes>
-              <Route path='/ptofile/*' element={<Profile store={props.store} />} />
-              <Route path='/dialogs/*' element={<DialogsContainer store={props.store} />} />
+              <Route path='/ptofile/*' element={<Profile />} />
+              <Route path='/dialogs/*' element={<DialogsContainer />} />
               <Route path='/news/*' element={<News />} />
-              <Route path='/music/*' element={<Music />} />
+              <Route path='/music' element={<Music/>} />
               <Route path='/settings/*' element={<Settings />} />
+              <Route path='/users' element={<UsersContainer />} />
             </Routes>
           </div>
         </div>

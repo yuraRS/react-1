@@ -4,7 +4,7 @@ import Friend from './Friend/Friend';
 
 
 const Sitebar = (props) => {
-  let ffiendElement = props.state.friends.map( f =>  <Friend name ={f.name} avatar={f.url} />);
+  let ffiendElement = props.state.friends.map( f =>  <Friend name ={f.name} avatar={f.url} key={f.id} />);
 
   return (
     <div className={s.sitebar}>
@@ -22,6 +22,9 @@ const Sitebar = (props) => {
             </li>
             <li className={s.item}>
               <NavLink to='/music' className={s.link} >Music</NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink to='/users' className={s.link} >Users</NavLink>
             </li>
           </ul>
         </nav>
