@@ -21,10 +21,10 @@ const Sitebar = (props) => {
               <NavLink to='/news' className={s.link} >News</NavLink>
             </li>
             <li className={s.item}>
-              <NavLink to='/music' className={s.link} >Music</NavLink>
+              <NavLink to='/users' className={s.link} >Users</NavLink>
             </li>
             <li className={s.item}>
-              <NavLink to='/users' className={s.link} >Users</NavLink>
+              <NavLink to='/music' className={s.link} >Music</NavLink>
             </li>
           </ul>
         </nav>

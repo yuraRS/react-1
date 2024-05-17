@@ -8,8 +8,6 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
-import Music from './components/Music/Music';
-
 
 
 
@@ -26,7 +24,6 @@ const App = (props) => {
               <Route path='/ptofile/*' element={<Profile />} />
               <Route path='/dialogs/*' element={<DialogsContainer />} />
               <Route path='/news/*' element={<News />} />
-              <Route path='/music' element={<Music/>} />
               <Route path='/settings/*' element={<Settings />} />
               <Route path='/users' element={<UsersContainer />} />
             </Routes>
@@ -42,5 +39,7 @@ const App = (props) => {
 
 
 export default App;
+
+
 
 
