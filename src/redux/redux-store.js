@@ -9,6 +9,7 @@ let reducers = combineReducers({
     dialogsPage: dialogsReducer,
     sitebarPage: sitebarReducer,
     usersPage: usersReducer,
+
 });
 
 let store = legacy_createStore(reducers);
