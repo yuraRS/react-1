@@ -10,7 +10,7 @@ const TOGGLE_IS_FECHING = 'TOGGLE-IS-FECHING';
 let initialState = {
     users: [],
     totalUsersCount: 20,
-    pageSize: 4,
+    pageSize: 100,
     currentPage: 1,
     isFetching: false,
 };

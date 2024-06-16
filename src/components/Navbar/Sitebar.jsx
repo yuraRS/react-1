@@ -12,7 +12,7 @@ const Sitebar = (props) => {
         <nav className={s.body}>
           <ul className={s.list}>
             <li className={s.item}>
-              <NavLink to='/ptofile' className={s.link} >Profile</NavLink>
+              <NavLink to='/profile' className={s.link} >Profile</NavLink>
             </li>
             <li className={s.item}>
               <NavLink to='/dialogs' className={s.link} >Messages</NavLink>
