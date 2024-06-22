@@ -9,6 +9,7 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import Profile from './components/Prifile/Profile';
 import ProfileContainer from './components/Prifile/ProfileContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 
 
@@ -18,12 +19,12 @@ const App = (props) => {
   return (
     <div className='app-wrapper'>
       <div className="app-container">
+        <HeaderContainer />
         <div className='app-body'>
-          <Header />
           <Sitebar state={props.state.sitebarPage} />
-          <div className='app-wrapper-content'>
+          <div className='app-content'>
             <Routes>
-              <Route path='/profile/:userId?/*' element ={<ProfileContainer />} />
+              <Route path='/profile/:userId?/*' element={<ProfileContainer />} />
               <Route path='/dialogs/*' element={<DialogsContainer />} />
               <Route path='/news/*' element={<News />} />
               <Route path='/settings/*' element={<Settings />} />

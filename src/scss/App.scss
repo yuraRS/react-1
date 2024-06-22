@@ -19,10 +19,10 @@
 .app-body {
   display: grid;
   grid-template-columns: 250px 8fr;
-  gap: 15px;
+  column-gap: 15px;
 }
 
-.app-wrapper-content {
+.app-content {
     
 }
   

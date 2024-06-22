@@ -6,8 +6,8 @@ import preloader from '../../../assets/images/loader.gif';
 
 let Preloader = () => {
     return (
-        <div>
-            <img src={preloader} alt="" />
+        <div style={{maxWidth: '30px'}} >
+            <img style={{maxWidth: '100%', }} src={preloader} alt="" />
         </div>
     )
 };
@@ -16,3 +16,4 @@ let Preloader = () => {
 
 
 export default Preloader;
+

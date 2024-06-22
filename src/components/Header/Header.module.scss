@@ -1,15 +1,68 @@
 
 .header {
-    grid-column: span 2;
+    //grid-column: span 2;
+    background-color: #485ab2;
+    margin-bottom: 10px;
 }
 .container {
     min-height: 80px;
     background-color: #485ab2;
     display: grid;
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
 }
 .logo {
     font-size: 20px;
     font-weight: 700;
     color: white;
+}
+
+
+.loginBlock {
+    justify-self: end;
+    font-size: 20px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+        color: white;
+
+    a {
+        font-size: 20px;
+        color: white;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: rgb(184, 174, 174);
+        }
+
+    }
+}
+
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:  center;
+    column-gap: 20px;
+    
+}
+
+.avatar {
+    max-width: 30px;
+    
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
+.userAuthAvatar {
+    max-width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+
+    }
 }

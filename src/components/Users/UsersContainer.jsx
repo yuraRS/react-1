@@ -9,7 +9,12 @@ class UsersAPIComponent extends React.Component {
 
     componentDidMount() {
         this.props.toggleIsFeching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page${this.props.currentPage}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page${this.props.currentPage}`, {
+            withCredentials: true,
+            headers: {
+                'API-KEY': 'bde36a84-eccf-48f5-ad4c-4f4177d3a6b0'
+            }
+        })
             .then((response) => {
                 this.props.toggleIsFeching(false);
                 this.props.setUsers(response.data.items);
@@ -20,7 +25,12 @@ class UsersAPIComponent extends React.Component {
     onPagesChanged = (pageNumber) => {
         this.props.setCurrentPage(pageNumber);
         this.props.toggleIsFeching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${pageNumber}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${pageNumber}`, {
+            withCredentials: true,
+            headers: {
+                'API-KEY': 'bde36a84-eccf-48f5-ad4c-4f4177d3a6b0'
+            }
+        })
         .then((response) => {
             this.props.toggleIsFeching(false);
             this.props.setUsers(response.data.items);
