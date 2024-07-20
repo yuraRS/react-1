@@ -7,10 +7,9 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
-import Profile from './components/Prifile/Profile';
 import ProfileContainer from './components/Prifile/ProfileContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
-
+import LoginPage from './components/Login/Login';
 
 
 
@@ -29,6 +28,7 @@ const App = (props) => {
               <Route path='/news/*' element={<News />} />
               <Route path='/settings/*' element={<Settings />} />
               <Route path='/users' element={<UsersContainer />} />
+              <Route path='/login' element={<LoginPage />} />
             </Routes>
           </div>
         </div>
